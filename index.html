@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salma Farah</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#4b0000;
+padding:20px;
+color:white;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:black;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 0 30px rgba(0,0,0,.5);
+}
+
+.header{
+padding:40px;
+text-align:center;
+}
+
+.header h1{
+font-size:50px;
+font-weight:bold;
+}
+
+.menu{
+padding:20px;
+}
+
+.menu button{
+width:100%;
+padding:20px;
+margin:12px 0;
+border:none;
+border-radius:15px;
+background:#2d1;
+color:white;
+font-size:24px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.menu button:hover{
+background:red;
+}
+
+.content{
+padding:40px;
+background:#140;
+min-height:250px;
+}
+
+.content-section{
+display:none;
+}
+
+.content-section.active{
+display:block;
+}
+
+.content h2{
+font-size:45px;
+margin-bottom:20px;
+}
+
+.content p{
+font-size:24px;
+line-height:1.8;
+}
+
+.footer{
+background:#4a1;
+text-align:center;
+padding:20px;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>Salma Farah</h1>
+</div>
+
+<div class="menu">
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('about')">About</button>
+<button onclick="showPage('news')">News</button>
+<button onclick="showPage('contact')">Contact Us</button>
+</div>
+
+<div class="content">
+
+<div id="home" class="content-section active">
+<h2>Home</h2>
+<p>
+Kusoo dhawaaw bogga Salma Farah.
+Halkaan waxaad ka heli kartaa xog iyo macluumaad muhiim ah.
+</p>
+</div>
+
+<div id="about" class="content-section">
+<h2>About</h2>
+<p>
+Qaybtani waxay sharxaysaa xogta guud,
+ujeeddooyinka iyo himilooyinka boggan.
+</p>
+</div>
+
+<div id="news" class="content-section">
+<h2>News</h2>
+<p>
+Halkan waxaa lagu soo bandhigaa
+wararka cusub iyo ogeysiisyada muhiimka ah.
+</p>
+</div>
+
+<div id="contact" class="content-section">
+<h2>Contact Us</h2>
+<p>
+Email: salma@example.com<br>
+Phone: +252 61 0000000
+</p>
+</div>
+
+</div>
+
+<div class="footer">
+© 2025 Salma Farah
+</div>
+
+</div>
+
+<script>
+function showPage(pageId){
+
+let pages=document.querySelectorAll('.content-section');
+
+pages.forEach(page=>{
+page.classList.remove('active');
+});
+
+document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
